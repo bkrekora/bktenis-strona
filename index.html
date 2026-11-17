@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BKtenis — Szkoła Tenisa Bartłomiej Krekora | Chorzów</title>
+<meta name="description" content="BKtenis — nauka gry w tenisa dla dzieci i dorosłych w hali SCS Sokół w Chorzowie oraz profesjonalny serwis rakiet tenisowych. Zapisz się na darmowy trening.">
+<link rel="canonical" href="https://bktenis.pl/">
+
+<!-- Udostępnianie w social media (Facebook, Messenger, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:url" content="https://bktenis.pl/">
+<meta property="og:site_name" content="BKtenis">
+<meta property="og:title" content="BKtenis — Szkoła Tenisa Bartłomiej Krekora | Chorzów">
+<meta property="og:description" content="Nauka gry w tenisa dla dzieci i dorosłych w hali SCS Sokół w Chorzowie oraz profesjonalny serwis rakiet tenisowych.">
+<meta property="og:image" content="https://bktenis.pl/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BKtenis — Szkoła Tenisa Bartłomiej Krekora | Chorzów">
+<meta name="twitter:description" content="Nauka gry w tenisa dla dzieci i dorosłych w hali SCS Sokół w Chorzowie oraz profesjonalny serwis rakiet tenisowych.">
+<meta name="twitter:image" content="https://bktenis.pl/assets/img/og-image.jpg">
+
+<!-- Favicony (lekkie — nie 232 KB jak poprzednio) -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+
+<!-- Dane strukturalne dla Google (wizytówka, wyniki wyszukiwania) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "BKtenis — Szkoła Tenisa Bartłomiej Krekora",
+  "image": "https://bktenis.pl/assets/img/og-image.jpg",
+  "url": "https://bktenis.pl/",
+  "telephone": "+48883007327",
+  "email": "bktenis86@gmail.com",
+  "priceRange": "50–520 zł",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chorzów",
+    "addressRegion": "śląskie",
+    "addressCountry": "PL"
+  },
+  "areaServed": "Chorzów",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61577366723133",
+    "https://www.instagram.com/bktenis86/",
+    "https://www.google.com/maps?cid=8682291723711479997"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="styles.css">
+
+<!-- Preload obrazu hero (LCP) — przeglądarka zaczyna go pobierać od razu,
+     równolegle z CSS/fontami, zamiast czekać aż dotrze do <img> w HTML. -->
+<link rel="preload" as="image" href="assets/img/logo-hero.webp" imagesrcset="assets/img/logo-hero-xs.webp 250w, assets/img/logo-hero-sm.webp 500w, assets/img/logo-hero.webp 900w" imagesizes="(max-width: 1020px) 320px, 420px" fetchpriority="high">
+
+<!-- ============ GOOGLE ANALYTICS 4 ============
+     Identyfikator pomiaru (G-NBEQ7M5QDG) jest ustawiony w script.js.
+     Skrypt GA ładuje się warunkowo — dopiero po zgodzie na cookies. -->
+
+<script>
+/* Ustawia "sezon" na elemencie <html> zanim strona się wyrysuje, żeby
+   uniknąć "mignięcia" domyślnym motywem. Podział wg realnego roku
+   szkółki BKtenis, nie kalendarzowych pór roku:
+   IX–XI  jesień — start roku szkółki, hala SCS Sokół
+   XII–II zima   — sezon halowy w pełni
+   III–VI wiosna — finisz sezonu halowego (do końca czerwca)
+   VII–VIII lato — wakacje, lekcje indywidualne na kortach odkrytych (inne obiekty) */
+document.documentElement.dataset.season = (function(){
+  var m = new Date().getMonth() + 1;
+  if (m >= 9 && m <= 11) return 'jesien';
+  if (m === 12 || m <= 2) return 'zima';
+  if (m >= 3 && m <= 6)  return 'wiosna';
+  return 'lato';
+})();
+</script>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <a href="tel:883007327" class="topbar__item">📞 883 007 327</a>
+    <a href="mailto:bktenis86@gmail.com" class="topbar__item">✉️ bktenis86@gmail.com</a>
+    <span class="topbar__item topbar__item--season" id="season-note"></span>
+    <span class="topbar__item topbar__item--loc">📍 SCS Sokół, Chorzów</span>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header__inner">
+    <a href="#top" class="brand">
+      <picture>
+        <source srcset="assets/img/logo-nav.webp" type="image/webp">
+        <img src="assets/img/logo-nav.png" alt="BKtenis logo" class="brand__logo" width="44" height="44">
+      </picture>
+      <span class="brand__text">BK<em>tenis</em></span>
+    </a>
+
+    <div class="header__social">
+      <a href="https://www.instagram.com/bktenis86/" target="_blank" rel="noopener" aria-label="Instagram BKtenis">IG</a>
+      <a href="https://www.facebook.com/profile.php?id=61577366723133" target="_blank" rel="noopener" aria-label="Facebook BKtenis">FB</a>
+      <a href="https://www.tiktok.com/@bktenis86" target="_blank" rel="noopener" aria-label="TikTok BKtenis">TT</a>
+      <a href="https://www.youtube.com/@BKtenis" target="_blank" rel="noopener" aria-label="YouTube BKtenis">YT</a>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="#nabor" class="nav__nabor">Nabór</a>
+      <a href="#oferta">Oferta</a>
+      <a href="tenis-dla-dzieci-chorzow.html">Dzieci</a>
+      <a href="tenis-dla-doroslych-chorzow.html">Dorośli</a>
+      <a href="serwis-rakiet-chorzow.html">Serwis</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#o-bktenis">O BKtenis</a>
+      <a href="#kontakt" class="nav__cta">Zapisz się</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ WSTĘGA SEZONOWA ============ -->
+<div class="season-ribbon" id="season-ribbon">
+  <div class="wrap season-ribbon__inner">
+    <span class="season-ribbon__icon" id="season-ribbon-icon" aria-hidden="true"></span>
+    <span id="season-ribbon-text"></span>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__court" aria-hidden="true"></div>
+  <div class="hero__particles" id="hero-particles" aria-hidden="true"></div>
+  <div class="wrap hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow eyebrow--serve" id="season-badge">PIŁKA W GRZE</p>
+      <h1 class="hero__title">Nie tylko uczę grać.<br><span class="ink-swap">Uczę kochać tenis!</span></h1>
+      <p class="hero__lead">BKtenis to lokalna szkoła tenisa dla dzieci, młodzieży i dorosłych. Małe grupy, treningi indywidualne i 21 lat doświadczenia pracy trenera na korcie.</p>
+      <div class="hero__actions">
+        <a href="#kontakt" class="btn btn--primary">📞 Umów pierwszy trening</a>
+        <a href="#cennik" class="btn btn--ghost">Zobacz cennik</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><strong>21 lat</strong><span>doświadczenia trenera</span></div>
+        <div class="stat"><strong>65 zł</strong><span>od osoby / trening w grupie 4-os.</span></div>
+        <div class="stat"><strong>100 zł</strong><span>lekcja indywidualna + kort</span></div>
+      </div>
+    </div>
+    <div class="hero__art">
+      <picture>
+        <source srcset="assets/img/logo-hero-xs.webp 250w, assets/img/logo-hero-sm.webp 500w, assets/img/logo-hero.webp 900w" sizes="(max-width: 1020px) 320px, 420px" type="image/webp">
+        <img src="assets/img/logo-hero.png" alt="Maskotka BKtenis — piesek z rakietą tenisową" class="hero__mascot" width="900" height="900" fetchpriority="high">
+      </picture>
+    </div>
+  </div>
+  <div class="hero__net" aria-hidden="true"></div>
+</section>
+
+<!-- ============ NABÓR ============ -->
+<section id="nabor" class="nabor">
+  <div class="wrap nabor__inner">
+    <div class="nabor__copy">
+      <p class="eyebrow eyebrow--nabor" id="nabor-tag">NABÓR</p>
+      <h2 class="nabor__title">Darmowe treningi i zapisy na rok szkolny <span id="nabor-year"></span></h2>
+      <p class="nabor__lead">Trzy weekendy, w które możesz przyjść na trening za darmo i zapisać dziecko lub siebie do BKtenis na nadchodzący rok szkolny — bez zobowiązań.</p>
+      <a href="#kontakt" class="btn btn--primary">Zapisz się na darmowy trening</a>
+    </div>
+    <div class="nabor__dates" id="nabor-dates" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section id="oferta" class="section section--dark">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--1">OFERTA</p>
+    <h2 class="section__title section__title--light">Wszystko, czego potrzebujesz, żeby grać</h2>
+    <p class="section__lead section__lead--light">Od pierwszego kontaktu z rakietą po regularne treningi — dobierz grupę wiekową i format zajęć.</p>
+
+    <div class="offer-grid">
+      <article class="offer-tile" style="--tile-c:var(--yellow)">
+        <div class="offer-tile__icon">🧒</div>
+        <h3>Tenis dla dzieci</h3>
+        <p>Nauka dopasowana do wieku i poziomu. Ruch, koordynacja, gra i dobra atmosfera.</p>
+      </article>
+      <article class="offer-tile" style="--tile-c:var(--blue)">
+        <div class="offer-tile__icon">🏆</div>
+        <h3>Tenis dla młodzieży</h3>
+        <p>Technika, poruszanie się, taktyka i coraz bardziej świadoma gra.</p>
+      </article>
+      <article class="offer-tile" style="--tile-c:var(--green)">
+        <div class="offer-tile__icon">🎾</div>
+        <h3>Tenis dla dorosłych</h3>
+        <p>Od zera, po przerwie lub na poziomie średniozaawansowanym.</p>
+      </article>
+      <article class="offer-tile" style="--tile-c:var(--orange)">
+        <div class="offer-tile__icon">🙋</div>
+        <h3>Trening indywidualny</h3>
+        <p>100% uwagi trenera i praca dokładnie nad tym, czego potrzebujesz.</p>
+      </article>
+      <article class="offer-tile" style="--tile-c:var(--red)">
+        <div class="offer-tile__icon">👥</div>
+        <h3>Małe grupy 2–4 osoby</h3>
+        <p>Więcej kontaktu z piłką, więcej gry i atrakcyjna cena za trening.</p>
+      </article>
+      <article class="offer-tile" style="--tile-c:var(--yellow)">
+        <div class="offer-tile__icon">🎯</div>
+        <h3>Dobór poziomu</h3>
+        <p>Pomagamy dobrać grupę lub trening indywidualny bez zgadywania.</p>
+      </article>
+    </div>
+
+    <article class="offer-tile offer-tile--wide">
+      <div class="offer-tile__icon">🔧</div>
+      <div class="offer-tile__body">
+        <h3>Serwis rakiet</h3>
+        <p>Wymiana naciągu i owijek — z Twoim naciągiem lub z oferty BKtenis. Szybko i solidnie.</p>
+      </div>
+      <a href="#cennik" class="btn btn--primary btn--sm offer-tile__cta">Zobacz cennik serwisu</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ DZIECI ============ -->
+<section id="dzieci" class="section section--tint">
+  <div class="wrap split split--reverse">
+    <div class="split__art">
+      <div class="photo-collage">
+        <picture>
+          <source srcset="assets/img/dzieci-main.webp" type="image/webp">
+          <img class="photo-collage__main" src="assets/img/dzieci-main.jpg" alt="Dzieci grające w tenisa na korcie BKtenis" width="900" height="560" loading="lazy">
+        </picture>
+        <div class="photo-collage__row">
+          <picture>
+            <source srcset="assets/img/dzieci-2.webp" type="image/webp">
+            <img src="assets/img/dzieci-2.jpg" alt="Chłopiec podczas treningu tenisa w BKtenis" width="440" height="440" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="assets/img/dzieci-3.webp" type="image/webp">
+            <img src="assets/img/dzieci-3.jpg" alt="Dzieci z piłkami i rakietami na zajęciach BKtenis" width="440" height="440" loading="lazy">
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="split__copy">
+      <p class="eyebrow eyebrow--2">DZIECI</p>
+      <h2 class="section__title">Pierwszy serw to dopiero początek</h2>
+      <p>Zajęcia dla najmłodszych uczą tenisa tak, jak dzieci uczą się najlepiej — przez zabawę, powtórzenia i małe sukcesy na każdym treningu. Pracuję nad koordynacją ruchową, refleksem, czuciem piłki i pewnością siebie na korcie.</p>
+      <ul class="check-list">
+        <li>Zajęcia indywidualne lub w małych grupach (2–4 osoby)</li>
+        <li>Sprzęt zapewniony na zajęciach — nie trzeba mieć własnej rakiety</li>
+        <li>Tempo dopasowane do wieku dziecka</li>
+        <li>Nacisk na dobrą zabawę i systematyczne postępy</li>
+        <li>Bezpieczna, przyjazna atmosfera na kortach SCS Sokół</li>
+      </ul>
+      <a href="tenis-dla-dzieci-chorzow.html" class="link-arrow">Zobacz pełną ofertę dla dzieci →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOROŚLI ============ -->
+<section id="dorosli" class="section">
+  <div class="wrap split">
+    <div class="split__copy">
+      <p class="eyebrow eyebrow--3">DOROŚLI</p>
+      <h2 class="section__title">Wracasz do gry czy zaczynasz od zera?</h2>
+      <p>Zajęcia dla dorosłych prowadzone są w tempie i formie, które pasują do Twojego celu — czy to rekreacja, powrót do formy po przerwie, czy przygotowanie do rywalizacji. Trening techniki, taktyki gry i poruszania się na korcie.</p>
+      <ul class="check-list">
+        <li>Lekcje indywidualne dla początkujących i grających</li>
+        <li>Sprzęt zapewniony na zajęciach — nie trzeba mieć własnej rakiety</li>
+        <li>Grupy 2–4 osobowe — trening ze znajomymi taniej</li>
+        <li>Praca nad techniką uderzeń, taktyką i motoryką</li>
+        <li>Elastyczne terminy dopasowane do Twojego grafiku</li>
+      </ul>
+      <a href="tenis-dla-doroslych-chorzow.html" class="link-arrow">Zobacz pełną ofertę dla dorosłych →</a>
+    </div>
+    <div class="split__art">
+      <div class="photo-collage photo-collage--pair">
+        <picture>
+          <source srcset="assets/img/dorosli-main.webp" type="image/webp">
+          <img src="assets/img/dorosli-main.jpg" alt="Dorośli grający w tenisa na zajęciach BKtenis" width="900" height="720" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="assets/img/dorosli-2.webp" type="image/webp">
+          <img src="assets/img/dorosli-2.jpg" alt="Trening tenisa dla dorosłych w hali SCS Sokół" width="900" height="460" loading="lazy">
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERWIS ============ -->
+<section id="serwis" class="section section--dark">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--4">SERWIS RAKIET</p>
+    <h2 class="section__title section__title--light">Naciąg, który trzyma formę tak długo, jak Ty</h2>
+    <p class="section__lead section__lead--light">Zużyty naciąg to gorsza kontrola i mniej czucia piłki. BKtenis wymienia naciągi i owijki szybko, solidnie i z naciągami, które sam wykorzystuję na treningach.</p>
+
+    <div class="cards cards--3">
+      <article class="card card--dark">
+        <div class="card__icon" style="--c:var(--yellow)">🧵</div>
+        <h3>Twój naciąg</h3>
+        <p>Masz już swój naciąg? Wymienię go szybko i starannie — bez zbędnego czekania.</p>
+      </article>
+      <article class="card card--dark">
+        <div class="card__icon" style="--c:var(--blue)">🎯</div>
+        <h3>Naciąg z oferty BKtenis</h3>
+        <p>Dobiorę naciąg pod Twój styl gry z dostępnej oferty — od rekreacyjnego po turniejowy.</p>
+      </article>
+      <article class="card card--dark">
+        <div class="card__icon" style="--c:var(--red)">🎾</div>
+        <h3>Wymiana owijek</h3>
+        <p>Owijki Yonex, Wilson, Head — świeży chwyt do rakiety w kilka minut.</p>
+      </article>
+    </div>
+    <a href="serwis-rakiet-chorzow.html" class="link-arrow link-arrow--light">Zobacz szczegóły serwisu rakiet →</a>
+  </div>
+</section>
+
+<!-- ============ CENNIK ============ -->
+<section id="cennik" class="section section--tint">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--1">CENNIK</p>
+    <h2 class="section__title">Jasne stawki, bez niespodzianek</h2>
+    <p class="section__lead">Ceny zajęć i serwisu rakiet — grupowe rozliczane w pakietach 4 zajęć.</p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3 class="price-card__title">Lekcje indywidualne</h3>
+        <p class="price-card__price">100 <span>zł / lekcja</span></p>
+        <p class="price-card__desc">Trening 1:1 dopasowany do Twojego poziomu i celu — dla każdego.</p>
+        <a href="#kontakt" class="btn btn--outline btn--sm">Zapisz się</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-card__title">Grupa 2 osoby</h3>
+        <p class="price-card__price">520 <span>zł / 4 zajęcia</span></p>
+        <p class="price-card__desc">130 zł za osobę za jedne zajęcia — trenujcie razem, płaćcie mniej.</p>
+        <a href="#kontakt" class="btn btn--outline btn--sm">Zapisz się</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-card__title">Grupa 3 osoby</h3>
+        <p class="price-card__price">340 <span>zł / 4 zajęcia</span></p>
+        <p class="price-card__desc">85 zł za osobę za jedne zajęcia.</p>
+        <a href="#kontakt" class="btn btn--outline btn--sm">Zapisz się</a>
+      </div>
+
+      <div class="price-card price-card--featured">
+        <p class="price-card__badge">Najczęściej wybierane</p>
+        <h3 class="price-card__title">Grupa 4 osoby</h3>
+        <p class="price-card__price">260 <span>zł / 4 zajęcia</span></p>
+        <p class="price-card__desc">65 zł za osobę za jedne zajęcia — najniższy koszt jednostkowy.</p>
+        <a href="#kontakt" class="btn btn--primary btn--sm">Zapisz się</a>
+      </div>
+    </div>
+
+    <h3 class="price-table__heading">Serwis rakiet</h3>
+    <div class="price-grid price-grid--service">
+      <div class="price-card">
+        <h3 class="price-card__title">Wymiana naciągu</h3>
+        <p class="price-card__price">50 <span>zł</span></p>
+        <p class="price-card__desc">Twój własny naciąg — wymieniam go szybko i starannie.</p>
+        <a href="#kontakt" class="btn btn--outline btn--sm">Umów serwis</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-card__title">Naciąg z oferty BKtenis + wymiana</h3>
+        <p class="price-card__price">80–150 <span>zł</span></p>
+        <p class="price-card__desc">Dobieram naciąg pod Twój styl gry — od rekreacyjnego po turniejowy.</p>
+        <a href="#kontakt" class="btn btn--outline btn--sm">Umów serwis</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-card__title">Wymiana owijki</h3>
+        <p class="price-card__price">10 <span>zł</span></p>
+        <p class="price-card__desc">Yonex, Wilson, Head — świeży chwyt do rakiety w kilka minut.</p>
+        <a href="#kontakt" class="btn btn--outline btn--sm">Umów serwis</a>
+      </div>
+    </div>
+    <p class="price-table__note">Cena naciągu z oferty BKtenis zależy od wybranego modelu.</p>
+  </div>
+</section>
+
+<!-- ============ O BKTENIS ============ -->
+<section id="o-bktenis" class="section">
+  <div class="wrap split split--reverse">
+    <div class="split__art">
+      <div class="trainer-photo">
+        <picture>
+          <source srcset="assets/img/trener-sm.webp 480w, assets/img/trener.webp 900w" sizes="(max-width: 860px) 100vw, 480px" type="image/webp">
+          <img src="assets/img/trener.jpg" alt="Bartłomiej Krekora, trener BKtenis, na korcie tenisowym" width="900" height="1200" loading="lazy">
+        </picture>
+      </div>
+    </div>
+    <div class="split__copy">
+      <p class="eyebrow eyebrow--2">O BKTENIS</p>
+      <h2 class="section__title">Bartłomiej Krekora</h2>
+      <p>BKtenis to szkoła tenisa prowadzona przeze mnie, Bartłomieja Krekorę, na kortach SCS Sokół w Chorzowie. Uczę tenisa dzieci i dorosłych — od pierwszego kontaktu z rakietą po regularne treningi techniczne i taktyczne — a poza kortem zajmuję się serwisem rakiet, żeby sprzęt moich zawodników zawsze był gotowy do gry.</p>
+      <p>Każde zajęcia dopasowuję do osoby, z którą pracuję: inaczej trenuje się z dzieckiem stawiającym pierwsze kroki na korcie, inaczej z dorosłym wracającym do gry po latach przerwy. Wspólny mianownik jeden — solidne podstawy i frajda z gry.</p>
+      <a href="#kontakt" class="link-arrow">Umów pierwsze zajęcia →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTNERZY ============ -->
+<section id="partnerzy" class="section section--tint">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--1">PARTNERZY</p>
+    <h2 class="section__title">Z kim współpracuję</h2>
+    <p class="section__lead">Zaufali mi i polecam ich dalej — sprawdź, czym się zajmują.</p>
+    <div class="partners-grid">
+      <a href="https://www.hobbyliga.pl/?r=BKTENIS" target="_blank" rel="noopener sponsored" class="partner-card partner-card--hobbyliga" aria-label="HobbyLiga — przejdź do strony partnera (otwiera się w nowej karcie)">
+        <picture>
+          <source srcset="assets/img/partner-hobbyliga.webp" type="image/webp">
+          <img src="assets/img/partner-hobbyliga.jpg" alt="HobbyLiga — łączy nas sport" width="800" height="420" loading="lazy">
+        </picture>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100057642182245" target="_blank" rel="noopener sponsored" class="partner-card partner-card--sokol" aria-label="SCS Sokół — Centrum Sportów Rakietowych — przejdź do strony partnera (otwiera się w nowej karcie)">
+        <picture>
+          <source srcset="assets/img/partner-sokol.webp" type="image/webp">
+          <img src="assets/img/partner-sokol.jpg" alt="SCS Sokół — Centrum Sportów Rakietowych" width="700" height="602" loading="lazy">
+        </picture>
+      </a>
+      <a href="http://skoptyk.pl/" target="_blank" rel="noopener sponsored" class="partner-card partner-card--skoptyk" aria-label="Skoptyk — przejdź do strony partnera (otwiera się w nowej karcie)">
+        <img src="assets/img/partner-skoptyk.jpg" alt="Skoptyk" width="376" height="79" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPINIE ============
+     3 prawdziwe opinie z wizytówki Google (serwis rakiet). Gdy zbiorę
+     opinie o zajęciach, dodam kolejne karty analogicznie. -->
+<section id="opinie" class="section section--tint">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--3">OPINIE</p>
+    <h2 class="section__title">Co mówią klienci</h2>
+
+    <a href="https://www.google.com/maps?cid=8682291723711479997" target="_blank" rel="noopener" class="google-reviews-cta">
+      <span class="google-reviews-cta__icon">⭐</span>
+      <span class="google-reviews-cta__text">
+        <strong>Zobacz opinie na Google</strong>
+        <span>BKtenis — Profesjonalny Serwis Rakiet Tenisowych</span>
+      </span>
+      <span class="google-reviews-cta__arrow">→</span>
+    </a>
+
+    <div class="cards cards--3">
+      <article class="testimonial-card">
+        <div class="testimonial-card__stars" aria-label="Ocena: 5 na 5 gwiazdek">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-card__quote">„Super naciągnięcie rakiety — szybko i przede wszystkim na taką siłę, jaka była zamówiona. Fachowe doradzanie w zakresie rakiet i tenisa. Polecam.”</p>
+        <p class="testimonial-card__author">Zbigniew Pyziak <span>· Opinia z Google</span></p>
+      </article>
+      <article class="testimonial-card">
+        <div class="testimonial-card__stars" aria-label="Ocena: 5 na 5 gwiazdek">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-card__quote">„Perfect! Polecam! Przeciwnicy bez szans!”</p>
+        <p class="testimonial-card__author">Aleksander Moćko <span>· Opinia z Google</span></p>
+      </article>
+      <article class="testimonial-card">
+        <div class="testimonial-card__stars" aria-label="Ocena: 5 na 5 gwiazdek">⭐⭐⭐⭐⭐</div>
+        <p class="testimonial-card__quote">„Polecam. Wyjątkowo sprawna komunikacja, terminowość, a co najważniejsze — serwis wykonywany rzetelnie i profesjonalnie.”</p>
+        <p class="testimonial-card__author">Krzysztof <span>· Opinia z Google</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--1">FAQ</p>
+    <h2 class="section__title">Najczęstsze pytania</h2>
+    <p class="section__lead">Nie znalazłeś/aś odpowiedzi? Napisz — sekcja Kontakt jest tuż niżej.</p>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Od jakiego wieku można zapisać dziecko na zajęcia?</summary>
+        <p>Trenuję dzieci w różnym wieku, dopasowując tempo i formę zajęć indywidualnie. Napisz, ile lat ma Twoje dziecko, a razem ustalimy odpowiednią grupę lub termin lekcji indywidualnej.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Czy trzeba mieć własną rakietę tenisową?</summary>
+        <p>Nie musisz mieć własnej rakiety — sprzęt zapewniam na zajęciach. Jeśli mimo to chcesz mieć własną rakietę, chętnie doradzę wybór, a mogę też ją dla Ciebie naciągnąć.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Gdzie odbywają się zajęcia?</summary>
+        <p>Od września do czerwca trenujemy w hali SCS Sokół w Chorzowie. W wakacje (lipiec–sierpień) prowadzę indywidualne lekcje na kortach odkrytych na innych obiektach.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Ile kosztują zajęcia?</summary>
+        <p>Lekcja indywidualna to 100 zł. Zajęcia grupowe (2–4 osoby) rozliczane są w pakietach 4 spotkań. Pełny cennik razem z serwisem rakiet znajdziesz w sekcji <a href="#cennik">Cennik</a>.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Czy prowadzisz też zajęcia dla dorosłych początkujących?</summary>
+        <p>Tak — pracuję zarówno z osobami, które nigdy nie grały, jak i z wracającymi do gry po przerwie. Zajęcia dopasowuję do poziomu i celu.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Jak się zapisać?</summary>
+        <p>Najprościej zadzwoń, napisz e-mail albo skorzystaj z formularza w sekcji <a href="#kontakt">Kontakt</a> — odpowiem i ustalimy termin pierwszych zajęć lub darmowego treningu w ramach naboru.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section id="kontakt" class="section section--dark">
+  <div class="wrap kontakt">
+    <div class="kontakt__info">
+      <p class="eyebrow eyebrow--4">KONTAKT</p>
+      <h2 class="section__title section__title--light">Umówmy pierwsze zajęcia</h2>
+      <p class="section__lead section__lead--light">Zadzwoń, napisz albo zostaw wiadomość w formularzu — odpowiadam najszybciej jak mogę.</p>
+
+      <ul class="kontakt__list">
+        <li>
+          <span class="kontakt__icon">📞</span>
+          <div><strong>Telefon</strong><a href="tel:883007327">883 007 327</a></div>
+        </li>
+        <li>
+          <span class="kontakt__icon">💬</span>
+          <div><strong>WhatsApp</strong><a href="https://wa.me/48883007327?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fabym%20zapyta%C4%87%20o%20zaj%C4%99cia%20BKtenis" target="_blank" rel="noopener">Napisz na WhatsApp</a></div>
+        </li>
+        <li>
+          <span class="kontakt__icon">✉️</span>
+          <div><strong>E-mail</strong><a href="mailto:bktenis86@gmail.com">bktenis86@gmail.com</a></div>
+        </li>
+        <li>
+          <span class="kontakt__icon">⭐</span>
+          <div><strong>Opinie</strong><a href="https://www.google.com/maps?cid=8682291723711479997" target="_blank" rel="noopener">Zobacz na Google</a></div>
+        </li>
+        <li>
+          <span class="kontakt__icon">📍</span>
+          <div><strong>Kort</strong><span>SCS Sokół, Chorzów</span></div>
+        </li>
+      </ul>
+
+      <div class="map-embed">
+        <span class="map-embed__pin" aria-hidden="true">📍</span>
+        <p class="map-embed__title">SCS Sokół, Chorzów</p>
+        <p class="map-embed__addr">Tu trenujemy — kliknij, aby zobaczyć dojazd</p>
+        <a href="https://www.google.com/maps?q=SCS%20Sok%C3%B3%C5%82%20Chorz%C3%B3w" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Otwórz w Google Maps</a>
+      </div>
+    </div>
+
+    <form class="kontakt__form" id="contact-form" action="https://formspree.io/f/meaqkrbw" method="POST">
+      <h3>Napisz wiadomość</h3>
+
+      <label for="f-name">Imię i nazwisko</label>
+      <input type="text" id="f-name" name="name" required autocomplete="name">
+
+      <label for="f-contact">Telefon lub e-mail</label>
+      <input type="text" id="f-contact" name="contact" required autocomplete="tel">
+
+      <label for="f-topic">Czym jesteś zainteresowany/a?</label>
+      <select id="f-topic" name="topic">
+        <option>Zajęcia dla dziecka</option>
+        <option>Zajęcia dla dorosłych</option>
+        <option>Serwis rakiety</option>
+        <option>Inne</option>
+      </select>
+
+      <label for="f-message">Wiadomość</label>
+      <textarea id="f-message" name="message" rows="4" required></textarea>
+
+      <!-- Pole-pułapka na boty. Ukryte dla ludzi (CSS), boty często je wypełniają. -->
+      <input type="text" name="_gotcha" class="kontakt__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label class="kontakt__consent">
+        <input type="checkbox" id="f-consent" name="zgoda" required>
+        <span>Wyrażam zgodę na przetwarzanie moich danych osobowych w celu udzielenia odpowiedzi na zapytanie (zgodnie z <a href="polityka-prywatnosci.html">polityką prywatności</a>).</span>
+      </label>
+
+      <button type="submit" class="btn btn--primary btn--block">Wyślij wiadomość</button>
+      <p class="kontakt__form-status" id="form-status" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a href="#top" class="brand brand--footer">
+      <picture>
+        <source srcset="assets/img/logo-nav.webp" type="image/webp">
+        <img src="assets/img/logo-nav.png" alt="BKtenis logo" class="brand__logo" width="44" height="44">
+      </picture>
+      <span class="brand__text">BK<em>tenis</em></span>
+    </a>
+    <p class="footer__tag">Nauka gry w tenisa — Bartłomiej Krekora, SCS Sokół, Chorzów</p>
+    <nav class="footer__nav">
+      <a href="#nabor">Nabór</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#cennik">Cennik</a>
+      <a href="serwis-rakiet-chorzow.html">Serwis</a>
+      <a href="#o-bktenis">O BKtenis</a>
+      <a href="#partnerzy">Partnerzy</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="https://www.instagram.com/bktenis86/" target="_blank" rel="noopener" aria-label="Instagram BKtenis">IG</a>
+      <a href="https://www.facebook.com/profile.php?id=61577366723133" target="_blank" rel="noopener" aria-label="Facebook BKtenis">FB</a>
+      <a href="https://www.tiktok.com/@bktenis86" target="_blank" rel="noopener" aria-label="TikTok BKtenis">TT</a>
+      <a href="https://www.youtube.com/@BKtenis" target="_blank" rel="noopener" aria-label="YouTube BKtenis">YT</a>
+    </div>
+
+    <p class="footer__copy">© <span id="year"></span> BKtenis. Wszelkie prawa zastrzeżone. · <a href="polityka-prywatnosci.html">Polityka prywatności</a> · <a href="#" id="cookie-settings-link">Ustawienia cookies</a></p>
+  </div>
+</footer>
+
+<!-- Pływający przycisk WhatsApp — widoczny cały czas podczas przewijania -->
+<a href="https://wa.me/48883007327?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fabym%20zapyta%C4%87%20o%20zaj%C4%99cia%20BKtenis"
+   target="_blank" rel="noopener"
+   class="whatsapp-fab"
+   aria-label="Napisz do nas na WhatsApp">💬</a>
+
+<!-- ============ COOKIE BANNER (RODO) ============ -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Zgoda na pliki cookies">
+  <div class="wrap cookie-banner__inner">
+    <p class="cookie-banner__text">
+      Używamy plików cookies niezbędnych do działania strony oraz — za Twoją zgodą — analitycznych (Google Analytics), żeby wiedzieć, co warto poprawić. Szczegóły w <a href="polityka-prywatnosci.html">polityce prywatności</a>.
+    </p>
+    <div class="cookie-banner__actions">
+      <button type="button" class="btn btn--ghost btn--sm" id="cookie-reject">Tylko niezbędne</button>
+      <button type="button" class="btn btn--primary btn--sm" id="cookie-accept">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

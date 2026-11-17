@@ -1,0 +1,8 @@
+# Netlify _headers — długi cache dla zdjęć/logo (rzadko się zmieniają),
+# BEZ długiego cache dla HTML/CSS/JS — strona jest w aktywnym rozwoju,
+# a agresywny cache tych plików mógłby ukrywać najnowsze zmiany przed
+# odwiedzającymi przez wiele dni. Gdy prace nad treścią się ustabilizują,
+# można rozszerzyć długi cache też na CSS/JS.
+
+/assets/*
+  Cache-Control: public, max-age=2592000
