@@ -521,6 +521,7 @@ button{ font-family: inherit; }
 }
 .cards--4{ grid-template-columns: repeat(4, 1fr); }
 .cards--3{ grid-template-columns: repeat(3, 1fr); }
+.cards--2{ grid-template-columns: repeat(2, 1fr); }
 
 .card{
   background:#fff;
@@ -1126,7 +1127,7 @@ button{ font-family: inherit; }
   .hero{ padding-top: 60px; }
   .hero__stats{ gap: 22px; }
   .section{ padding: 64px 0; }
-  .cards--4, .cards--3{ grid-template-columns: 1fr; }
+  .cards--4, .cards--3, .cards--2{ grid-template-columns: 1fr; }
   .price-grid{ grid-template-columns: 1fr; }
   .kontakt__form{ padding: 26px 22px; }
 }
