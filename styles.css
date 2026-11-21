@@ -1305,3 +1305,5 @@ button{ font-family: inherit; }
 .string-tier--wide{ grid-column: 1 / -1; }
 .string-tier__sub{ font-family: var(--font-body); font-weight:500; font-size:.9rem; color: var(--ink-soft); }
 .string-row--note{ font-size:.9rem; color: var(--ink-soft); font-style: italic; }
+.card__link{ display:block; margin-top:10px; color: var(--yellow); font-weight:600; text-decoration:none; }
+.card__link:hover{ text-decoration:underline; }
