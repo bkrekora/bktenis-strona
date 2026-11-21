@@ -134,7 +134,7 @@ if (nabor.isActive) {
   const ribbonText = document.getElementById('season-ribbon-text');
   if (ribbon) ribbon.classList.add('is-nabor');
   if (ribbonIcon) ribbonIcon.textContent = '🎾';
-  if (ribbonText) ribbonText.textContent = 'Trwa nabór do BKtenis — w ten weekend darmowe treningi. Zapisz się!';
+  if (ribbonText) ribbonText.textContent = 'Trwa nabór do BKtenis — w ten weekend darmowe treningi dla dzieci. Zapisz dziecko!';
 }
 
 // Generuje unoszące się cząsteczki sezonowe w tle hero (liczba i pozycje
