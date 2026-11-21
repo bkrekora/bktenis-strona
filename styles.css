@@ -1307,3 +1307,5 @@ button{ font-family: inherit; }
 .string-row--note{ font-size:.9rem; color: var(--ink-soft); font-style: italic; }
 .card__link{ display:block; margin-top:10px; color: var(--yellow); font-weight:600; text-decoration:none; }
 .card__link:hover{ text-decoration:underline; }
+@media (min-width: 1021px){ .offer-grid > .offer-tile:last-child:nth-child(3n+2){ grid-column: span 2; } }
+@media (min-width: 621px) and (max-width: 1020px){ .offer-grid > .offer-tile:last-child:nth-child(odd){ grid-column: span 2; } }
