@@ -757,6 +757,8 @@ button{ font-family: inherit; }
 .price-card--featured .price-card__price{ color: var(--yellow); }
 .price-card__price span{ font-family: var(--font-body); font-size:.85rem; font-weight:500; color: var(--ink-soft); }
 .price-card--featured .price-card__price span{ color:#c9d2d8; }
+.price-card__pack{ font-size:.85rem; font-weight:600; color: var(--ink); margin: -6px 0 12px; }
+.price-card--featured .price-card__pack{ color:#fff; }
 .price-card__desc{ color: var(--ink-soft); font-size:.92rem; flex:1; margin-bottom: 22px; }
 
 .price-table__heading{ font-size:1.3rem; margin-bottom: 18px; }
