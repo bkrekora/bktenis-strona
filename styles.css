@@ -1265,3 +1265,43 @@ button{ font-family: inherit; }
   .cookie-banner__inner{ flex-direction:column; align-items:stretch; }
   .cookie-banner__actions{ display:grid; grid-template-columns:1fr 1fr; }
 }
+
+/* ============================================================
+   Serwis — lista naciągów
+   ============================================================ */
+.string-tiers{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.string-tier{
+  background:#fff; border:1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 22px 24px 10px; border-top: 6px solid var(--tier);
+}
+.string-tier--green{ --tier: var(--green); }
+.string-tier--blue{ --tier: var(--blue); }
+.string-tier--yellow{ --tier: var(--yellow); }
+.string-tier--ink{ --tier: var(--ink); }
+.string-tier__title{ font-size:1.2rem; margin-bottom: 6px; }
+.string-tier__list{ list-style:none; margin:0; padding:0; }
+.string-row{
+  display:flex; justify-content:space-between; align-items:flex-start; gap:16px;
+  padding: 12px 0; border-top: 1px solid var(--line);
+}
+.string-row:first-child{ border-top:0; }
+.string-row__name{ font-weight:600; }
+.string-row__desc{ display:block; font-weight:400; font-size:.88rem; color: var(--ink-soft); margin-top:2px; }
+.string-row__price{
+  flex:none; text-align:right; font-family: var(--font-display); font-weight:700; color: var(--blue-a11y); font-size:1.1rem;
+}
+.string-row__price small{ display:block; font-family: var(--font-body); font-weight:500; font-size:.75rem; color: var(--ink-soft); }
+.string-extras{ list-style:none; margin: 24px 0 0; padding:0; display:flex; flex-wrap:wrap; gap: 10px 28px; }
+.string-extras li{ font-size:.98rem; }
+.string-help{
+  margin-top: 28px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  background: var(--paper-2); border-radius: var(--radius); padding: 18px 22px;
+}
+.string-help p{ margin:0; }
+@media (max-width: 760px){
+  .string-tiers{ grid-template-columns: 1fr; }
+}
+.string-tier--orange{ --tier: var(--orange); }
+.string-tier--wide{ grid-column: 1 / -1; }
+.string-tier__sub{ font-family: var(--font-body); font-weight:500; font-size:.9rem; color: var(--ink-soft); }
+.string-row--note{ font-size:.9rem; color: var(--ink-soft); font-style: italic; }
