@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nie znaleziono strony | BKtenis</title>
+<meta name="robots" content="noindex">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/styles.css">
+
+<!-- Google Analytics (GA4) ładowany warunkowo — dopiero po zgodzie na cookies, patrz script.js -->
+
+<script>
+document.documentElement.dataset.season = (function(){
+  var m = new Date().getMonth() + 1;
+  if (m >= 9 && m <= 11) return 'jesien';
+  if (m === 12 || m <= 2) return 'zima';
+  if (m >= 3 && m <= 6)  return 'wiosna';
+  return 'lato';
+})();
+</script>
+
+<style>
+  /* Lekkie style tylko dla treści prawnej — spójne z resztą serwisu */
+  .legal{ max-width: 78ch; }
+  .legal h2{ font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); margin: 46px 0 14px; }
+  .legal h2:first-of-type{ margin-top: 0; }
+  .legal h3{ font-size: 1.02rem; color: var(--ink); margin: 22px 0 8px; }
+  .legal p{ margin: 0 0 14px; color: var(--ink-soft); }
+  .legal ul{ margin: 0 0 14px; padding-left: 20px; color: var(--ink-soft); }
+  .legal ul li{ margin-bottom: 6px; }
+  .legal strong{ color: var(--ink); }
+  .legal__updated{ font-size: .88rem; color: var(--ink-soft); margin-bottom: 30px; }
+  .legal__box{
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    margin: 0 0 30px;
+  }
+  .legal__box p:last-child{ margin-bottom:0; }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap topbar__inner">
+    <a href="tel:883007327" class="topbar__item">📞 883 007 327</a>
+    <a href="mailto:bktenis86@gmail.com" class="topbar__item">✉️ bktenis86@gmail.com</a>
+    <span class="topbar__item topbar__item--season" id="season-note"></span>
+    <span class="topbar__item topbar__item--loc">📍 SCS Sokół, Chorzów</span>
+  </div>
+</div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header__inner">
+    <a href="/" class="brand">
+      <picture>
+        <source srcset="/assets/img/logo-nav.webp" type="image/webp">
+        <img src="/assets/img/logo-nav.png" alt="BKtenis logo" class="brand__logo" width="44" height="44">
+      </picture>
+      <span class="brand__text">BK<em>tenis</em></span>
+    </a>
+
+    <div class="header__social">
+      <a href="https://www.instagram.com/bktenis86/" target="_blank" rel="noopener" aria-label="Instagram BKtenis">IG</a>
+      <a href="https://www.facebook.com/profile.php?id=61577366723133" target="_blank" rel="noopener" aria-label="Facebook BKtenis">FB</a>
+      <a href="https://www.tiktok.com/@bktenis86" target="_blank" rel="noopener" aria-label="TikTok BKtenis">TT</a>
+      <a href="https://www.youtube.com/@BKtenis" target="_blank" rel="noopener" aria-label="YouTube BKtenis">YT</a>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="/#nabor" class="nav__nabor">Nabór</a>
+      <a href="/#oferta">Oferta</a>
+      <a href="/tenis-dla-dzieci-chorzow">Dzieci</a>
+      <a href="/tenis-dla-doroslych-chorzow">Dorośli</a>
+      <a href="/serwis-rakiet-chorzow">Serwis</a>
+      <a href="/#cennik">Cennik</a>
+      <a href="/#o-bktenis">O BKtenis</a>
+      <a href="/#kontakt" class="nav__cta">Zapisz się</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ 404 ============ -->
+<main class="section" style="min-height:50vh">
+  <div class="wrap" style="text-align:center;max-width:640px">
+    <p class="eyebrow eyebrow--1">BŁĄD 404</p>
+    <h1 class="section__title">Nie ma takiej strony</h1>
+    <p class="section__lead" style="margin-left:auto;margin-right:auto">Strona mogła zostać przeniesiona albo adres zawiera literówkę. Sprawdź jedną z poniższych:</p>
+    <p style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+      <a href="/" class="btn btn--primary">Strona główna</a>
+      <a href="/tenis-dla-dzieci-chorzow" class="btn btn--outline">Dzieci</a>
+      <a href="/tenis-dla-doroslych-chorzow" class="btn btn--outline">Dorośli</a>
+      <a href="/serwis-rakiet-chorzow" class="btn btn--outline">Serwis rakiet</a>
+    </p>
+  </div>
+</main>
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a href="/" class="brand brand--footer">
+      <picture>
+        <source srcset="/assets/img/logo-nav.webp" type="image/webp">
+        <img src="/assets/img/logo-nav.png" alt="BKtenis logo" class="brand__logo" width="44" height="44">
+      </picture>
+      <span class="brand__text">BK<em>tenis</em></span>
+    </a>
+    <p class="footer__tag">Nauka gry w tenisa — Bartłomiej Krekora, SCS Sokół, Chorzów</p>
+    <nav class="footer__nav">
+      <a href="/#nabor">Nabór</a>
+      <a href="/#oferta">Oferta</a>
+      <a href="/#cennik">Cennik</a>
+      <a href="/serwis-rakiet-chorzow">Serwis</a>
+      <a href="/#o-bktenis">O BKtenis</a>
+      <a href="/#partnerzy">Partnerzy</a>
+      <a href="/#opinie">Opinie</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="https://www.instagram.com/bktenis86/" target="_blank" rel="noopener" aria-label="Instagram BKtenis">IG</a>
+      <a href="https://www.facebook.com/profile.php?id=61577366723133" target="_blank" rel="noopener" aria-label="Facebook BKtenis">FB</a>
+      <a href="https://www.tiktok.com/@bktenis86" target="_blank" rel="noopener" aria-label="TikTok BKtenis">TT</a>
+      <a href="https://www.youtube.com/@BKtenis" target="_blank" rel="noopener" aria-label="YouTube BKtenis">YT</a>
+    </div>
+
+    <p class="footer__copy">© <span id="year"></span> BKtenis. Wszelkie prawa zastrzeżone. · <a href="/polityka-prywatnosci">Polityka prywatności</a> · <a href="#" id="cookie-settings-link">Ustawienia cookies</a></p>
+  </div>
+</footer>
+
+<!-- Pływający przycisk WhatsApp — widoczny cały czas podczas przewijania -->
+<a href="https://wa.me/48883007327?text=Dzie%C5%84%20dobry%2C%20chcia%C5%82bym%2Fabym%20zapyta%C4%87%20o%20zaj%C4%99cia%20BKtenis"
+   target="_blank" rel="noopener"
+   class="whatsapp-fab"
+   aria-label="Napisz do nas na WhatsApp">💬</a>
+
+<!-- ============ COOKIE BANNER (RODO) ============ -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Zgoda na pliki cookies">
+  <div class="wrap cookie-banner__inner">
+    <p class="cookie-banner__text">
+      Używamy plików cookies niezbędnych do działania strony oraz — za Twoją zgodą — analitycznych (Google Analytics), żeby wiedzieć, co warto poprawić. Szczegóły w <a href="/polityka-prywatnosci">polityce prywatności</a>.
+    </p>
+    <div class="cookie-banner__actions">
+      <button type="button" class="btn btn--ghost btn--sm" id="cookie-reject">Tylko niezbędne</button>
+      <button type="button" class="btn btn--primary btn--sm" id="cookie-accept">Akceptuj wszystkie</button>
+    </div>
+  </div>
+</div>
+
+<script src="/script.js"></script>
+</body>
+</html>

@@ -2,22 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bktenis.pl/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
-    <loc>https://bktenis.pl/tenis-dla-dzieci-chorzow.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://bktenis.pl/tenis-dla-dzieci-chorzow</loc>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
-    <loc>https://bktenis.pl/tenis-dla-doroslych-chorzow.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://bktenis.pl/tenis-dla-doroslych-chorzow</loc>
+    <lastmod>2026-11-22</lastmod>
   </url>
   <url>
-    <loc>https://bktenis.pl/serwis-rakiet-chorzow.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://bktenis.pl/serwis-rakiet-chorzow</loc>
+    <lastmod>2026-11-22</lastmod>
   </url>
 </urlset>
