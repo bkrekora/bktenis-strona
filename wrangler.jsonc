@@ -1,0 +1,14 @@
+{
+  // Konfiguracja Cloudflare Workers (statyczna strona BKtenis)
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "bktenis-strona",
+  "compatibility_date": "2026-11-19",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".",
+    // błędny adres -> nasza strona 404.html ze statusem 404
+    "not_found_handling": "404-page",
+    // /strona.html -> /strona (adresy bez .html, zgodne z canonical i sitemap)
+    "html_handling": "auto-trailing-slash"
+  }
+}
