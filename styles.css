@@ -1314,3 +1314,7 @@ button{ font-family: inherit; }
 .mini-media{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 8px 0 28px; }
 .mini-media img, .mini-media video{ display:block; width:100%; height:auto; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); background: var(--paper-2); }
 @media (max-width: 760px){ .mini-media{ grid-template-columns: 1fr; } }
+.mini-reels__title{ margin: 36px 0 14px; font-size:1.2rem; }
+.mini-reels{ display:flex; gap: 20px; flex-wrap: wrap; }
+.mini-reels video{ display:block; width: 280px; max-width: 100%; height:auto; aspect-ratio: 9/16; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); background:#000; }
+@media (max-width: 640px){ .mini-reels video{ width: calc(50% - 10px); } }
