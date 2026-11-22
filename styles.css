@@ -633,24 +633,9 @@ button{ font-family: inherit; }
 }
 
 /* ============================================================
-   Photo placeholders (until real photos are supplied)
+   Zdjęcie w sekcji split (podstrona Dzieci)
    ============================================================ */
-.photo-placeholder{
-  position:relative;
-  border-radius: var(--radius);
-  background:
-    linear-gradient(135deg, rgba(30,127,214,.16), rgba(255,206,0,.18) 45%, rgba(230,64,44,.14));
-  border: 2px dashed color-mix(in srgb, var(--blue) 40%, var(--line));
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  text-align:center;
-  color: var(--ink-soft);
-  overflow:hidden;
-}
-.photo-placeholder--square{ aspect-ratio: 1 / 1; max-width: 420px; }
+.split__photo{ display:block; width:100%; max-width:440px; height:auto; aspect-ratio:1/1; object-fit:cover; border-radius: var(--radius); }
 
 .trainer-photo{
   border-radius: var(--radius);
